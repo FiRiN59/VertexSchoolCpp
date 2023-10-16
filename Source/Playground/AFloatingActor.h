@@ -9,27 +9,26 @@
 UCLASS()
 class PLAYGROUND_API AFloatingActor : public AActor
 {
-	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	AFloatingActor();
+    GENERATED_BODY()
 
-	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* FloatMesh;
+public:
+    // Sets default values for this actor's properties
+    AFloatingActor();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Floating Actor")
-	float FloatSpeed = 20.0f;
+    UPROPERTY(VisibleAnywhere)
+    UStaticMeshComponent* FloatMesh;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Floating Actor")
-	float RotationSpeed = 20.0f;	
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Floating Actor")
+    float FloatSpeed = 20.0f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Floating Actor")
+    float RotationSpeed = 20.0f;
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+    // Called when the game starts or when spawned
+    virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
+public:
+    // Called every frame
+    virtual void Tick(float DeltaTime) override;
 };
